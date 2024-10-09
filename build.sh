@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# Build the project
-echo "Building the project..."
+# Install pip if it's not already installed
+echo "Ensuring pip is installed..."
+python3.9 -m ensurepip --upgrade
 
-# Install dependencies
+# Install project dependencies
+echo "Installing dependencies..."
+python3.9 -m pip install --upgrade pip
 python3.9 -m pip install -r requirements.txt
 
 # Run migrations
